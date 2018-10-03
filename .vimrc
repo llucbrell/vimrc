@@ -68,6 +68,11 @@ call plug#begin('/root/.local/share/nvim/plugged')
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTree' }
 
+" Load on start
+Plug 'vim-airline/vim-airline'
+Plug 'SirVer/ultisnips'
+Plug 'prettier/vim-prettier'
+
 " End of plugin admin
 call plug#end()
 
