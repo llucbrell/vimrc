@@ -59,9 +59,17 @@
 "                8    C                       
 "                ;Ct                          	    License    	GNU-license       
 "
-"
 
 
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+call plug#begin('/.local/share/nvim/plugged')
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTree' }
+
+" End of plugin admin
+call plug#end()
 
 "filetype detection
 filetype plugin indent on
