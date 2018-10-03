@@ -72,6 +72,8 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTree' }
 Plug 'vim-airline/vim-airline'
 Plug 'SirVer/ultisnips'
 Plug 'prettier/vim-prettier'
+Plug 'tpope/vim-surround'
+Plug 'gko/vim-coloresque'
 
 " End of plugin admin
 call plug#end()
@@ -98,13 +100,13 @@ set norelativenumber
 
 " set visual line on the cursor
 set cursorline 
-hi CursorLine guibg=lightgray ctermbg=black ctermfg=yellow
+hi CursorLine guibg=lightgray ctermbg=black ctermfg=red
 
 "Change Color when entering Insert Mode
-autocmd InsertEnter * highlight  CursorLine ctermbg=lightgray ctermfg=yellow
+autocmd InsertEnter * highlight  CursorLine ctermbg=lightgray ctermfg=red
 
 " Revert Color to default when leaving Insert Mode
-autocmd InsertLeave * highlight  CursorLine ctermbg=black ctermfg=yellow
+autocmd InsertLeave * highlight  CursorLine ctermbg=black ctermfg=red
 
 " show commands while typing in normal mode
 set showcmd
