@@ -98,13 +98,13 @@ set norelativenumber
 
 " set visual line on the cursor
 set cursorline 
-hi CursorLine guibg=lightgray ctermbg=black ctermfg=red
+hi CursorLine guibg=lightgray ctermbg=black ctermfg=yellow
 
 "Change Color when entering Insert Mode
-autocmd InsertEnter * highlight  CursorLine ctermbg=lightgray ctermfg=red
+autocmd InsertEnter * highlight  CursorLine ctermbg=lightgray ctermfg=yellow
 
 " Revert Color to default when leaving Insert Mode
-autocmd InsertLeave * highlight  CursorLine ctermbg=black ctermfg=red
+autocmd InsertLeave * highlight  CursorLine ctermbg=black ctermfg=yellow
 
 " show commands while typing in normal mode
 set showcmd
