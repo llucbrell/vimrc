@@ -60,13 +60,14 @@
 "                ;Ct                          	    License    	GNU-license       
 "
 
-
+" PLUGIN LOAD
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 call plug#begin('/root/.local/share/nvim/plugged')
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTree' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Load on start
 Plug 'vim-airline/vim-airline'
@@ -74,9 +75,33 @@ Plug 'SirVer/ultisnips'
 Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-surround'
 Plug 'gko/vim-coloresque'
+Plug 'scrooloose/nerdcommenter'
+Plug 'jiangmiao/auto-pairs'
+Plug 'powerline/powerline'
+Plug 'mattn/emmet-vim'
+Plug 'wokalski/autocomplete-flow'
+" For func argument completion
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 
 " End of plugin admin
 call plug#end()
+
+" PLUGIN CONFIGURATION SETUP
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+" neosnippet        
+let g:neosnippet#enable_completed_snippet = 1
+"If neosnippet integration is not enabled, this plugin will 
+"insert an opening paren when completing a function name. 
+"Add this line to your configuration to disable that behavior
+"let g:autocomplete_flow#insert_paren_after_function = 0
+
+
+
+"BASIC STYLE FOR VIM
 
 "filetype detection
 filetype plugin indent on
