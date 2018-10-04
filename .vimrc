@@ -60,65 +60,6 @@
 "                ;Ct                          	    License    	GNU-license       
 "
 
-" PLUGIN LOAD
-" Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-call plug#begin('/root/.local/share/nvim/plugged')
-
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTree' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-" Load on start
-Plug 'vim-airline/vim-airline'
-Plug 'SirVer/ultisnips'
-Plug 'prettier/vim-prettier'
-Plug 'tpope/vim-surround'
-Plug 'gko/vim-coloresque'
-Plug 'scrooloose/nerdcommenter'
-Plug 'jiangmiao/auto-pairs'
-Plug 'powerline/powerline'
-Plug 'mattn/emmet-vim'
-Plug 'wokalski/autocomplete-flow'
-" For func argument completion
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
-
-" End of plugin admin
-call plug#end()
-
-" PLUGIN CONFIGURATION SETUP
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-
-" neosnippet        
-let g:neosnippet#enable_completed_snippet = 1
-"If neosnippet integration is not enabled, this plugin will 
-"insert an opening paren when completing a function name. 
-"Add this line to your configuration to disable that behavior
-"let g:autocomplete_flow#insert_paren_after_function = 0
-
-" NERDTress File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
-call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-
 "BASIC STYLE FOR VIM
 
 "filetype detection
@@ -470,3 +411,66 @@ nmap ĆK <C-w>k
 
 "TODO falta mapear el caracter ~ y agilizar los registros (")   
 "TODO Revisar easy .vimrc in home/programs
+
+
+
+
+
+" PLUGIN LOAD for NEOVIM
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+call plug#begin('/root/.local/share/nvim/plugged')
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTree' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" Load on start
+Plug 'vim-airline/vim-airline'
+Plug 'SirVer/ultisnips'
+Plug 'prettier/vim-prettier'
+Plug 'tpope/vim-surround'
+Plug 'gko/vim-coloresque'
+Plug 'scrooloose/nerdcommenter'
+Plug 'jiangmiao/auto-pairs'
+Plug 'powerline/powerline'
+Plug 'mattn/emmet-vim'
+Plug 'wokalski/autocomplete-flow'
+" For func argument completion
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+
+" End of plugin admin
+call plug#end()
+
+" PLUGIN CONFIGURATION SETUP
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+" neosnippet        
+let g:neosnippet#enable_completed_snippet = 1
+"If neosnippet integration is not enabled, this plugin will 
+"insert an opening paren when completing a function name. 
+"Add this line to your configuration to disable that behavior
+"let g:autocomplete_flow#insert_paren_after_function = 0
+
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
