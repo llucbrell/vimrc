@@ -534,3 +534,5 @@ endif
 let g:airline_symbols_ascii = 1
 " status bar fugitive integration
 let g:airline#extensions#branch#enabled = 1
+" to change text when it's no branch uncomment next
+"let g:airline#extensions#branch#empty_message = ''  
