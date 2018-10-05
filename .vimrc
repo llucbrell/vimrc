@@ -435,7 +435,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'gko/vim-coloresque'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'powerline/powerline'
+"Plug 'powerline/powerline'
 Plug 'mattn/emmet-vim'
 Plug 'wokalski/autocomplete-flow'
 " For func argument completion
