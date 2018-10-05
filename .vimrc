@@ -431,6 +431,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'NikolayFrantsev/jshint2.vim'
 Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'gko/vim-coloresque'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
@@ -527,3 +528,9 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
+
+
+" airline status bar configuration
+let g:airline_symbols_ascii = 1
+" status bar fugitive integration
+let g:airline#extensions#branch#enabled = 1
