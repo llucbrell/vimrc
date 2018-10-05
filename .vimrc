@@ -427,7 +427,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Load on start
 Plug 'vim-airline/vim-airline'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-surround'
 Plug 'gko/vim-coloresque'
@@ -438,8 +438,8 @@ Plug 'mattn/emmet-vim'
 Plug 'wokalski/autocomplete-flow'
 " For func argument completion
 Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
 " Snippets are separated from the engine. Add this if you want them:
+Plug 'Shougo/neosnippet-snippets'
 Plug 'honza/vim-snippets'
 " End of plugin admin
 call plug#end()
@@ -481,9 +481,9 @@ call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
 " ultisnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<C-u>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<C-ù>"
+"let g:UltiSnipsExpandTrigger="<C-u>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<C-ù>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
@@ -515,10 +515,10 @@ xmap <C-u>     <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+imap <expr><TAB>
+ \ pumvisible() ? "\<C-n>" :
+ \ neosnippet#expandable_or_jumpable() ?
+ \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
