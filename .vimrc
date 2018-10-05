@@ -482,8 +482,8 @@ call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 " ultisnips
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<C-u>"
-let g:UltiSnipsJumpForwardTrigger="<C-b>"
-let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<C-ù>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
@@ -504,3 +504,25 @@ nnoremap <C-ln> :lnext<CR>
 nnoremap <C-lp> :lprevious<CR>
 "inoremap <silent><F3> <C-O>:lprevious<CR>
 "vnoremap <silent><F3> :lprevious<CR>
+
+
+
+" neosnippet key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-u>     <Plug>(neosnippet_expand_or_jump)
+smap <C-u>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-u>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
