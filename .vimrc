@@ -428,6 +428,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Load on start
 Plug 'vim-airline/vim-airline'
 "Plug 'SirVer/ultisnips'
+Plug 'NikolayFrantsev/jshint2.vim'
 Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-surround'
 Plug 'gko/vim-coloresque'
