@@ -536,3 +536,14 @@ let g:airline_symbols_ascii = 1
 let g:airline#extensions#branch#enabled = 1
 " to change text when it's no branch uncomment next
 "let g:airline#extensions#branch#empty_message = ''  
+
+
+"To define a mapping which uses the "mapleader" variable, the special var
+"  <Leader>   can be used.  It is replaced with the string value of mapleader
+"If   mapleader   is not set or empty, a backslash is used instead  
+"Example
+"    :map <Leader>A  oanother line <Esc>
+"Works like
+"    :map \A  oanother line <Esc>
+"But now it's set to ç
+:let mapleader = "ç"
