@@ -619,6 +619,10 @@ nmap <Leader>Mabt :tab ball
 nmap <Leader>Mlb :blast <CR>
 nmap <Leader>Mfb :bfirst <CR>
 
+"copy to cipboard
+vmap <Leader>c  "+y
+vmap <Leader>p  "+p
+nmap <Leader>x  "+d
 
 "cursor on windows switch between windows
 "-------------------
