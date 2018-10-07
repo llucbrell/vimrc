@@ -546,4 +546,85 @@ let g:airline#extensions#branch#enabled = 1
 "Works like
 "    :map \A  oanother line <Esc>
 "But now it's set to ç
+
 :let mapleader = "ç"
+
+:map <Leader>  oanother line <Esc>
+
+"tabs
+"-----
+" basics.. new, edit, kill, put, split and list
+nmap <Leader>nt :tabnew <CR>
+nmap <Leader>et :tabedit
+nmap <Leader>kt :tabclose <CR>
+"leaves only the currenttab 
+nmap <Leader>kat :tabonly <CR> 
+nmap <Leader>mht :tabmove -<CR>
+nmap <Leader>mlt :tabmove +<CR>
+nmap <Leader>dt :tab split<CR>
+nmap <Leader>lt :tabs <CR>
+" move between tabs
+nmap <C-h> :tabprevious<CR>
+nmap <C-l> :tabnext<CR>
+nmap <Leader>sht :tabprevious<CR>
+nmap <Leader>slt :tabnext<CR>
+" move tabs, switch them 
+nmap <Leader>ft :tabfirst <CR>
+nmap <Leader>ut :tablast <CR>
+"nmap ṔTW -- need command to from tab to window --may be it's not possible
+" only read tab
+nmap <Leader>nrt :tabv 
+
+
+"windows
+"----------
+" basics.. new, edit, kill, split, put in position
+nmap <Leader>nw :new <CR>
+nmap <Leader>nvw :vnew<CR>
+nmap <Leader>dw :split<CR>
+nmap <Leader>dvw :vsplit<CR> 
+nmap <Leader>kw :hide<CR>
+"leaves only the current window
+nmap <Leader>kaw <C-w>o
+nmap <Leader>dw :split<CR>
+" move content between windows
+nmap <Leader>Mjw <C-w>J
+nmap <Leader>Mhw <C-w>H
+nmap <Leader>Mlw <C-w>W
+nmap <Leader>Mkw <C-w>K
+" move content 
+nmap  <Leader>lw :last <CR>
+nmap <Leader>fw :first <CR>
+ " current window to a new tab it's not necesaire
+nmap <Leader>Mwt :tab split<CR>
+"split read only read window 
+nmap <Leader>nrw :split<CR>
+nmap <Leader>nrvw :vsplit<CR>
+
+"buffers
+"--------
+"list buffers , new buffer, edit, kill 
+nmap <Leader>lb :ls<CR>
+nmap <Leader>nb :e noName.txt<CR>
+nmap <Leader>eb :edit
+nmap <Leader>kb :bd<CR>
+" move between buffers also possible with cntrl+o or cntrl +i
+nmap <Leader>shb :bprevious<CR>
+nmap <Leader>slb :bnext<CR>
+" buffer to an new window with number buffer 
+nmap <Leader>Mbw :sbuffer 
+" all buffers on tabs
+nmap <Leader>Mabt :tab ball 
+" move content  from
+nmap <Leader>Mlb :blast <CR>
+nmap <Leader>Mfb :bfirst <CR>
+
+
+"cursor on windows switch between windows
+"-------------------
+nmap <Leader>sjw <C-w>j
+nmap <Leader>slw <C-w>l
+nmap <Leader>shw <C-w>h
+nmap <Leader>skw <C-w>k
+
+
