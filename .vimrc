@@ -381,6 +381,8 @@ nmap <Leader>mLt :tablast <CR>
 nmap <Leader>nrt :tabv 
 " only one tab
 nmap <Leader>kat :tabonly<CR>
+" kill all tabs
+nmap <Leader>kAt :tabnew | tabonly<CR>
 
 "windows
 "----------
@@ -458,7 +460,8 @@ nmap <Leader>gt :tab split<CR>
 "split read only read window 
 nmap <Leader>nrw :split<CR>
 nmap <Leader>nrvw :vsplit<CR>
-
+"kill all windows
+nmap <Leader>kAw :wincmd o | tabonly<CR>
 
 
 "buffers
@@ -485,6 +488,8 @@ nmap <Leader>mfb :bfirst <CR>
 "move to first and last
 nmap <Leader>mRb :blast <CR>
 nmap <Leader>mLb :bfirst <CR>
+nmap <Leader>kAw :bufdo bdelete!<CR>
+nmap <Leader>kaw :%bd|e#<CR>
 
 "copy to cipboard
 "-----------------
