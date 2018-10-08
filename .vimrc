@@ -529,7 +529,7 @@ nmap <Leader>sJw :wincmd p<CR>
 
 "repeat last command
 "---------------------
-:nmap <Leader><Tab> @:<CR>
+:nmap <Leader><Tab> :@:<CR>
 
 
 
