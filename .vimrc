@@ -348,7 +348,7 @@ omap az a>
 
 :let mapleader = "ç"
 
-:map <Leader>  oanother line <Esc>
+nmap Ç ç
 
 "tabs
 "-----
@@ -437,9 +437,24 @@ nmap <Leader>skw <C-w>k
 
 " mapping commands in normal mode
 "---------------------------------
-nmap ŔO :set relativenumber <CR>
-nmap ŔF :set norelativenumber <CR>
-imap Á <C-x><C-k>
+
+" Relative or absolute number lines
+function! NumberToggle()
+    if(&nu == 1)
+        set nu!
+        set rnu
+    else
+        set nornu
+        set nu
+    endif
+endfunction
+
+"nnoremap <C-r> :call NumberToggle()<CR>
+nmap ´R :call NumberToggle()<CR>
+"complete with dictionary
+imap ´D <C-x><C-k>
+"run prettier
+nmap ´P :Prettier<CR>
 
 
 
