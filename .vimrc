@@ -461,7 +461,7 @@ nmap <Leader>gt :tab split<CR>
 nmap <Leader>nrw :split<CR>
 nmap <Leader>nrvw :vsplit<CR>
 "kill all windows
-nmap <Leader>kAw :wincmd o | tabonly<CR>
+nmap <Leader>kAw :wincmd o | q!<CR>
 
 
 "buffers
