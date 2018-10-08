@@ -59,8 +59,9 @@
 "                8    C                       
 "                ;Ct                          	    License    	GNU-license       
 "
-
-"BASIC STYLE FOR VIM
+"---------------------------------------------------------------------------------------------
+"                                BASIC STYLE FOR VIM
+"---------------------------------------------------------------------------------------------
 
 "filetype detection
 filetype plugin indent on
@@ -107,6 +108,12 @@ set showcmd
 " also called wrapmargin at 20 characters
 " set wrapmargin=20 
 
+
+
+"-------------------------------------------------------------------------------------
+"                 KEY MAPPING
+"--------------------------------------------------------------------------------------
+
 " Disable Arrow keys in normal, visual, selecte and operator mode
 map <up> <nop>
 map <down> <nop>
@@ -117,110 +124,194 @@ map ´ñ <C-V>241
 map ñ <Esc>
 map ´´ ´
 map `` `
-" keymapping for strange characters with ´ control key
-map ´g =
-map ´f )
-map ´d (
-map ´s /
-map ´a &
-map ´t %
-map ´r $
-map ´e ·
-map ´w "
-map ´q !
-map ´z ¿
-map ´x ?
-map ´c ^
-map ´v *
-map ´b ª
-map ´, ;
-map ´. :
-map ´< >
-map ´- _
-" keymapping for strange characters with ` control key
-map `q \|
-map `w @
-map `e #
-map `r \
-map `t ¬
-map `a '
-map `s ¡
-map `d [
-map `f ]
-map `z {
-map `x }
 
 "numbers to speed up, only in normal mode
-nmap á 1
+"-----------------------------------------
+nmap ´q 1
 nmap ẃ 2
 nmap é 3
 nmap ŕ 4
-nmap ǵ 5
+nmap ´t 5
 nmap ý 6
 nmap ú 7
 nmap í 8
 nmap ó 9
 nmap ṕ 0
-"numbers to speed up, only in normal mode
-vmap á 1
+" to ensure it works well in most keyboards
+nmap ´w 2
+nmap ´r 4
+nmap ´y 6
+nmap ú 7
+nmap í 8
+nmap ó 9
+nmap ´p 0
+"numbers to speed up, only in visual mode
+vmap ´q 1
 vmap ẃ 2
 vmap é 3
 vmap ŕ 4
-vmap ǵ 5
+vmap ´t 5
 vmap ý 6
 vmap ú 7
 vmap í 8
 vmap ó 9
 vmap ṕ 0
-"numbers to speed up, only in normal mode
-omap á 1
+" to ensure it works well in most keyboards
+vmap ´w 2
+vmap ´r 4
+vmap ´y 6
+vmap ú 7
+vmap í 8
+vmap ó 9
+vmap ´p 0
+"numbers to speed up, only in command or pending mode
+omap ´q 1
 omap ẃ 2
 omap é 3
 omap ŕ 4
-omap ǵ 5
+omap ´t 5
 omap ý 6
 omap ú 7
 omap í 8
 omap ó 9
 omap ṕ 0
+" to ensure it works well in most keyboards
+omap ´w 2
+omap ´r 4
+omap ´y 6
+omap ú 7
+omap í 8
+omap ó 9
+omap ´p 0
 
 "special keys for normal mode
-nmap ì (
-nmap ò )
-nmap ǘ ]
+"-----------------------------
+nmap ḱ (
+nmap ´k (
+nmap ĺ )
+nmap ´l )
+nmap ǘ ] 
 nmap ć [
-nmap ẁ {
-nmap è }
-nmap ḱ =
-nmap ĺ ?
-nmap ś $
-nmap ỳ &
+nmap ´v ] 
+nmap ´c [
+nmap ´j /
+nmap ´h &
 nmap ǵ %
-nmap ù /
-nmap ń <
-nmap ḿ >
-nmap à !
+nmap ´g %
+nmap ´f $
+nmap ´d #
+nmap ´s "
+nmap ś "
+nmap á !
 nmap ź \|
-nmap ǜ \
+nmap ´z \|
+nmap x @
+nmap ´b \
+nmap ń {
+nmap ḿ }
+nmap ´n {
+nmap ´m }
+nmap ´, ;
+nmap ´. :
+nmap ´- _
+nmap ´< >
+nmap ´+ *
 "special keys for pending-mode
-omap ì (
-omap ò )
-omap ǘ ]
+omap ḱ (
+omap ´k (
+omap ĺ )
+omap ´l )
+omap ǘ ] 
 omap ć [
-omap ẁ {
-omap è }
-omap ḱ =
-omap ĺ ?
-omap ś $
-omap ỳ &
+omap ´v ] 
+omap ´c [
+omap ´j /
+omap ´h &
 omap ǵ %
-omap ù /
-omap ń <
-omap ḿ >
-omap à !
+omap ´g %
+omap ´f $
+omap ´d #
+omap ´s "
+omap ś "
+omap á !
 omap ź \|
-omap ǜ \
+omap ´z \|
+omap x @
+omap ´b \
+omap ń {
+omap ḿ }
+omap ´n {
+omap ´m }
+omap ´, ;
+omap ´. :
+omap ´- _
+omap ´< >
+omap ´+ *
+"special keys for visual select mode
+vmap ḱ (
+vmap ´k (
+vmap ĺ )
+vmap ´l )
+vmap ǘ ] 
+vmap ć [
+vmap ´v ] 
+vmap ´c [
+vmap ´j /
+vmap ´h &
+vmap ǵ %
+vmap ´g %
+vmap ´f $
+vmap ´d #
+vmap ´s "
+vmap ś "
+vmap á !
+vmap ź \|
+vmap ´z \|
+vmap x @
+vmap ´b \
+vmap ń {
+vmap ḿ }
+vmap ´n {
+vmap ´m }
+vmap ´, ;
+vmap ´. :
+vmap ´- _
+vmap ´< >
+vmap ´+ *
+"special keys for select and substitute modes
+map! ḱ (
+map! ´k (
+map! ĺ )
+map! ´l )
+map! ǘ ] 
+map! ć [
+map! ´v ] 
+map! ´c [
+map! ´j /
+map! ´h &
+map! ǵ %
+map! ´g %
+map! ´f $
+map! ´d #
+map! ´s "
+map! ś "
+map! á !
+map! ź \|
+map! ´z \|
+map! x @
+map! ´b \
+map! ń {
+map! ḿ }
+map! ´n {
+map! ´m }
+map! ´, ;
+map! ´. :
+map! ´- _
+map! ´< >
+map! ´+ *
+
 "mapping text objects
+"---------------------
 omap iì i( 
 omap iò i) 
 omap ić i[ 
@@ -241,302 +332,10 @@ omap ac a'
 omap ax a" 
 omap az a> 
 
-"special keys for visual select mode
-vmap ì (
-vmap ò )
-vmap ǘ ]
-vmap ć [
-vmap ẁ {
-vmap è }
-vmap ḱ =
-vmap ĺ ?
-vmap ś $
-vmap ỳ &
-vmap ǵ %
-vmap ù /
-vmap ń <
-vmap ḿ >
-vmap à !
-vmap ź \|
-vmap ǜ \
-"same special keys for insert mode
-map! ì (
-map! ò )
-map! ǘ ]
-map! ć [
-map! ẁ {
-map! è }
-map! ḱ =
-map! ĺ ?
-map! ś $
-map! ỳ &
-map! ǵ %
-map! ù /
-map! ń <
-map! ḿ >
-map! à !
-map! ź \|
-map! ǜ \
-
-" Disable Arrow keys in Insert and Command modes
-map! <up> <nop>
-map! <down> <nop>
-map! <left> <nop>
-map! <right> <nop>
-" keymapping for control charcters
-map! ´ñ <C-V>241
-map! ñ <Esc>
-map! ´´ ´
-map! `` `
-" keymapping for strange characters with ´ control key
-map! ´g =
-map! ´f )
-map! ´d (
-map! ´s /
-map! ´a &
-map! ´t %
-map! ´r $
-map! ´e ·
-map! ´w "
-map! ´q !
-map! ´z ¿
-map! ´x ?
-map! ´c ^
-map! ´v *
-" keymapping for strange characters with ` control key
-map! `q \|
-map! `w @
-map! `e #
-map! `r \
-map! `t ¬
-map! `a '
-map! `s ¡
-map! `d [
-map! `f ]
-map! `z {
-map! `x }
 
 
-map! ´, ;
-map! ´. :
-map! ´< >
-map! ´- _
-
-
-
-
-
-" mapping commands in normal mode
-nmap ŔO :set relativenumber <CR>
-nmap ŔF :set norelativenumber <CR>
-imap Á <C-x><C-k>
-
-
-
-"tabs
-"-----
-" basics.. new, edit, kill, put, split and list
-nmap ŃT :tabnew <CR>
-nmap ÉT :tabedit
-nmap ḰT :tabclose <CR>
-"leaves only the currenttab 
-nmap ḰAT :tabonly <CR> 
-nmap ṔTH :tabmove -<CR>
-nmap ṔTL :tabmove +<CR>
-nmap ŚT :tab split<CR>
-nmap ĹT :tabs <CR>
-" move between tabs
-nmap <C-h> :tabprevious<CR>
-nmap <C-l> :tabnext<CR>
-nmap ḾTH :tabprevious<CR>
-nmap ḾTL :tabnext<CR>
-" move tabs, switch them 
-nmap ḾFT :tabfirst <CR>
-nmap ḾLT :tablast <CR>
-"nmap ṔTW 
-" only read tab
-nmap ǗT :tabv 
-
-
-"windows
-"----------
-" basics.. new, edit, kill, split, put in position
-nmap ŃW :new <CR>
-nmap ŃVW :vnew <CR>
-nmap ÉW :splip 
-nmap ÉVW :vsplip 
-nmap ḰW :hide <CR>
-"leaves only the current window
-nmap ḰAW <C-w>o
-nmap ŚW :split<CR>
-nmap ṔJW <C-w>J
-nmap ṔHW <C-w>H
-nmap ṔLW <C-w>W
-nmap ṔKW <C-w>K
-" move content  from
-nmap ḾLW :last <CR>
-nmap ḾFW :first <CR>
- " current window to a new tab
-nmap ǗWT :tab split<CR>
-"split read only read window 
-nmap ŚVW :vsplit<CR>
-
-"buffers
-"--------
-"list buffers , new buffer, edit, kill 
-nmap ĹB :ls <CR>
-nmap ŃB :e noName.txt <CR>
-nmap ÉB :edit
-nmap ḰB :bd <CR>
-" move between buffers also possible with cntrl+o or cntrl +i
-nmap ḾBH :bprevious<CR>
-nmap ḾBL :bnext<CR>
-" buffer to an new window with number buffer 
-nmap ṔBW :sbuffer 
-" all buffers on tabs
-nmap ṔABT :tab ball 
-" move content  from
-nmap ḾLB :blast <CR>
-nmap ḾFB :bfirst <CR>
-
-
-"cursor on windows
-"-------------------
-nmap ĆJ <C-w>j
-nmap ĆL <C-w>l
-nmap ĆH <C-w>h
-nmap ĆK <C-w>k
-
-
-
-"TODO falta mapear el caracter ~ y agilizar los registros (")   
-"TODO Revisar easy .vimrc in home/programs
-
-
-
-
-
-" PLUGIN LOAD for NEOVIM
-" Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-call plug#begin('/root/.local/share/nvim/plugged')
-
-" On-demand loading
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTree' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-" Load on start
-Plug 'vim-airline/vim-airline'
-"Plug 'SirVer/ultisnips'
-Plug 'NikolayFrantsev/jshint2.vim'
-Plug 'prettier/vim-prettier'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
-Plug 'gko/vim-coloresque'
-Plug 'scrooloose/nerdcommenter'
-Plug 'jiangmiao/auto-pairs'
-"Plug 'powerline/powerline'
-Plug 'mattn/emmet-vim'
-Plug 'wokalski/autocomplete-flow'
-" For func argument completion
-Plug 'Shougo/neosnippet'
-" Snippets are separated from the engine. Add this if you want them:
-Plug 'Shougo/neosnippet-snippets'
-Plug 'honza/vim-snippets'
-" End of plugin admin
-call plug#end()
-
-" PLUGIN CONFIGURATION SETUP
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-
-" neosnippet        
-let g:neosnippet#enable_completed_snippet = 1
-"If neosnippet integration is not enabled, this plugin will 
-"insert an opening paren when completing a function name. 
-"Add this line to your configuration to disable that behavior
-"let g:autocomplete_flow#insert_paren_after_function = 0
-
-" NERDTree show hidden files
-let NERDTreeShowHidden=1
-
-" NERDTress File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
-call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
-call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
-call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
-
-" ultisnips
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-"let g:UltiSnipsExpandTrigger="<C-u>"
-"let g:UltiSnipsJumpForwardTrigger="<tab>"
-"let g:UltiSnipsJumpBackwardTrigger="<C-ù>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-
-
-" jshint validation
-nnoremap <C-l> :JSHint<CR>
-"inoremap <silent><F1> <C-O>:JSHint<CR>
-"vnoremap <silent><F1> :JSHint<CR>
-
-" show next jshint error
-nnoremap <C-ln> :lnext<CR>
-"inoremap <silent><F2> <C-O>:lnext<CR>
-"vnoremap <silent><F2> :lnext<CR>
-
-" show previous jshint error
-nnoremap <C-lp> :lprevious<CR>
-"inoremap <silent><F3> <C-O>:lprevious<CR>
-"vnoremap <silent><F3> :lprevious<CR>
-
-
-
-" neosnippet key-mappings.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <C-u>     <Plug>(neosnippet_expand_or_jump)
-smap <C-u>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-u>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
-imap <expr><TAB>
- \ pumvisible() ? "\<C-n>" :
- \ neosnippet#expandable_or_jumpable() ?
- \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
-
-
-" airline status bar configuration
-let g:airline_symbols_ascii = 1
-" status bar fugitive integration
-let g:airline#extensions#branch#enabled = 1
-" to change text when it's no branch uncomment next
-"let g:airline#extensions#branch#empty_message = ''  
-
+" mapleader
+"------------
 
 "To define a mapping which uses the "mapleader" variable, the special var
 "  <Leader>   can be used.  It is replaced with the string value of mapleader
@@ -631,4 +430,150 @@ nmap <Leader>slw <C-w>l
 nmap <Leader>shw <C-w>h
 nmap <Leader>skw <C-w>k
 
+
+
+
+
+
+" mapping commands in normal mode
+"---------------------------------
+nmap ŔO :set relativenumber <CR>
+nmap ŔF :set norelativenumber <CR>
+imap Á <C-x><C-k>
+
+
+
+
+
+
+"TODO falta mapear el caracter ~ y agilizar los registros (")   
+"TODO Revisar easy .vimrc in home/programs
+
+
+
+
+"--------------------------------------------------------------------------- 
+"                          PLUGIN LOAD for NEOVIM
+"---------------------------------------------------------------------------
+
+" Specify a directory for plugins
+" - For Neovim: ~/.local/share/nvim/plugged
+call plug#begin('/root/.local/share/nvim/plugged')
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTree' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" Load on start
+Plug 'vim-airline/vim-airline'
+"Plug 'SirVer/ultisnips'
+Plug 'NikolayFrantsev/jshint2.vim'
+Plug 'prettier/vim-prettier'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'gko/vim-coloresque'
+Plug 'scrooloose/nerdcommenter'
+Plug 'jiangmiao/auto-pairs'
+"Plug 'powerline/powerline'
+Plug 'mattn/emmet-vim'
+Plug 'wokalski/autocomplete-flow'
+" For func argument completion
+Plug 'Shougo/neosnippet'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'Shougo/neosnippet-snippets'
+Plug 'honza/vim-snippets'
+" End of plugin admin
+call plug#end()
+
+" PLUGIN CONFIGURATION SETUP
+------------------------------
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+" neosnippet        
+let g:neosnippet#enable_completed_snippet = 1
+"If neosnippet integration is not enabled, this plugin will 
+"insert an opening paren when completing a function name. 
+"Add this line to your configuration to disable that behavior
+"let g:autocomplete_flow#insert_paren_after_function = 0
+
+" NERDTree show hidden files
+let NERDTreeShowHidden=1
+
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
+
+" ultisnips
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+"let g:UltiSnipsExpandTrigger="<C-u>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<C-ù>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+
+
+" jshint validation
+nnoremap <C-l> :JSHint<CR>
+"inoremap <silent><F1> <C-O>:JSHint<CR>
+"vnoremap <silent><F1> :JSHint<CR>
+
+" show next jshint error
+nnoremap <C-ln> :lnext<CR>
+"inoremap <silent><F2> <C-O>:lnext<CR>
+"vnoremap <silent><F2> :lnext<CR>
+
+" show previous jshint error
+nnoremap <C-lp> :lprevious<CR>
+"inoremap <silent><F3> <C-O>:lprevious<CR>
+"vnoremap <silent><F3> :lprevious<CR>
+
+
+
+" neosnippet key-mappings.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-u>     <Plug>(neosnippet_expand_or_jump)
+smap <C-u>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-u>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <expr><TAB>
+ \ pumvisible() ? "\<C-n>" :
+ \ neosnippet#expandable_or_jumpable() ?
+ \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+
+" airline status bar configuration
+let g:airline_symbols_ascii = 1
+" status bar fugitive integration
+let g:airline#extensions#branch#enabled = 1
+" to change text when it's no branch uncomment next
+"let g:airline#extensions#branch#empty_message = ''  
 
