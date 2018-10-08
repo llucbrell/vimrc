@@ -360,45 +360,106 @@ nmap <Leader>kt :tabclose <CR>
 nmap <Leader>kat :tabonly <CR> 
 nmap <Leader>mht :tabmove -<CR>
 nmap <Leader>mlt :tabmove +<CR>
+nmap <Leader>mft :tabmove -<CR>
+nmap <Leader>mlt :tabmove +<CR>
 nmap <Leader>dt :tab split<CR>
 nmap <Leader>lt :tabs <CR>
 " move between tabs
-nmap <C-h> :tabprevious<CR>
-nmap <C-l> :tabnext<CR>
+nmap <Leader>-t :tabprevious<CR>
+nmap <Leader>+t :tabnext<CR>
 nmap <Leader>sht :tabprevious<CR>
 nmap <Leader>slt :tabnext<CR>
-" move tabs, switch them 
-nmap <Leader>ft :tabfirst <CR>
-nmap <Leader>ut :tablast <CR>
+nmap <Leader>sHt :1tabnext<CR>
+nmap <Leader>sLt :$tabnext<CR>
+" move tabs to the first or last 
+nmap <Leader>mft :tabfirst <CR>
+nmap <Leader>mut :tablast <CR>
+nmap <Leader>mHt :tabfirst <CR>
+nmap <Leader>mLt :tablast <CR>
 "nmap ṔTW -- need command to from tab to window --may be it's not possible
 " only read tab
 nmap <Leader>nrt :tabv 
-
+" only one tab
+nmap <Leader>kat :tabonly<CR>
 
 "windows
 "----------
 " basics.. new, edit, kill, split, put in position
 nmap <Leader>nw :new <CR>
+nmap <Leader>nkw :new<CR>
+nmap <Leader>nlw :vnew<CR>
+nmap <Leader>nrw :vnew | wincmd x<CR>
+nmap <Leader>njw :new | wincmd x<CR>
 nmap <Leader>nvw :vnew<CR>
+nmap <Leader>ew :e
+nmap <Leader>ehw :wincmd h<CR>
+nmap <Leader>ejw :wincmd j<CR>
+nmap <Leader>ekw :wincmd k<CR>
+nmap <Leader>elw :wincmd l<CR>
+nmap <Leader>eHw :wincmd h<CR>
+nmap <Leader>eLw :wincmd b<CR>
+nmap <Leader>eKw :wincmd p<CR>
+nmap <Leader>eJw :wincmd p<CR>
 nmap <Leader>dw :split<CR>
 nmap <Leader>dvw :vsplit<CR> 
-nmap <Leader>kw :hide<CR>
+nmap <Leader>dlw :vsplit<CR>
+nmap <Leader>dlw :vsplit<CR>
+nmap <Leader>djw :split<CR>
+nmap <Leader>dkw :split<CR>
+nmap <Leader>dfw :split | wincmd K<CR>
+nmap <Leader>dlw :split | wincmd J<CR> 
+nmap <Leader>dvfw :vsplit | wincmd K<CR>
+nmap <Leader>dvlw :vsplit | wincmd J<CR> 
+nmap <Leader>dfvw :vsplit | wincmd K<CR>
+nmap <Leader>dlvw :vsplit | wincmd J<CR> 
+nmap <Leader>kw :q!<CR>
+nmap <Leader>khw :wincmd h| q! | wincmd p<CR>
+nmap <Leader>kjw :wincmd j| q! | wincmd p<CR>
+nmap <Leader>kkw :wincmd k| q! | wincmd p<CR>
+nmap <Leader>klw :wincmd l| q! | wincmd p<CR>
+nmap <Leader>kfw :1q!<CR>
+nmap <Leader>klw :$q!<CR>
+nmap <Leader>kJw :1q!<CR>
+nmap <Leader>kKw :$q!<CR>
+nmap <Leader>kHw :wincmd t |q! | wincmd p<CR>
+nmap <Leader>kLw :wincmd b |q! | wincmd p<CR>
+nmap <Leader>hw :hide<CR>
+nmap <Leader>hfw :1hide<CR>
+nmap <Leader>hlw :$hide<CR>
+nmap <Leader>hJw :1hide<CR>
+nmap <Leader>hKw :$hide<CR>
+nmap <Leader>hHw :wincmd t | hide | wincmd p<CR>
+nmap <Leader>hLw :wincmd b | hide | wincmd p<CR>
+nmap <Leader>khw :wincmd h| hide | wincmd p<CR>
+nmap <Leader>kjw :wincmd j| hide | wincmd p<CR>
+nmap <Leader>kkw :wincmd k| hide | wincmd p<CR>
+nmap <Leader>klw :wincmd l| hide | wincmd p<CR>
 "leaves only the current window
-nmap <Leader>kaw <C-w>o
-nmap <Leader>dw :split<CR>
-" move content between windows
-nmap <Leader>Mjw <C-w>J
-nmap <Leader>Mhw <C-w>H
-nmap <Leader>Mlw <C-w>W
-nmap <Leader>Mkw <C-w>K
-" move content 
+nmap <Leader>haw :wincmd o<CR>
+"TODO must change kill all windows to throw away changes
+nmap <Leader>kaw :wincmd o<CR>
+"resize window
+nmap <Leader>-w :wincmd -<CR>
+nmap <Leader>+w :wincmd +<CR>
+"move windows or move in the array
+nmap <Leader>mJw :wincmd J<CR>
+nmap <Leader>mHw :wincmd H<CR>
+nmap <Leader>mLw :wincmd L<CR>
+nmap <Leader>mKw :wincmd K<CR>
+nmap <Leader>mlw :wincmd r<CR>
+nmap <Leader>mhw :wincmd R<CR>
+nmap <Leader>mjw :wincmd x<CR>
+" move content to the first or to the last
 nmap  <Leader>lw :last <CR>
 nmap <Leader>fw :first <CR>
- " current window to a new tab it's not necesaire
-nmap <Leader>Mwt :tab split<CR>
+" move the current window to a new tab page
+nmap <Leader>gw :wincmd T<CR>
+nmap <Leader>gt :tab split<CR>
 "split read only read window 
 nmap <Leader>nrw :split<CR>
 nmap <Leader>nrvw :vsplit<CR>
+
+
 
 "buffers
 "--------
@@ -410,27 +471,58 @@ nmap <Leader>kb :bd<CR>
 " move between buffers also possible with cntrl+o or cntrl +i
 nmap <Leader>shb :bprevious<CR>
 nmap <Leader>slb :bnext<CR>
+nmap <Leader>sub :blast<CR>
+nmap <Leader>sfb :bfirst<CR>
 " buffer to an new window with number buffer 
-nmap <Leader>Mbw :sbuffer 
+nmap <Leader>gb :sbuffer
+" all buffers on windows
+nmap <Leader>gabw :ball 
 " all buffers on tabs
-nmap <Leader>Mabt :tab ball 
-" move content  from
-nmap <Leader>Mlb :blast <CR>
-nmap <Leader>Mfb :bfirst <CR>
+nmap <Leader>gabt :tab ball 
+"move to first and last
+nmap <Leader>mlb :blast <CR>
+nmap <Leader>mfb :bfirst <CR>
+"move to first and last
+nmap <Leader>mRb :blast <CR>
+nmap <Leader>mLb :bfirst <CR>
 
 "copy to cipboard
+"-----------------
 vmap <Leader>c  "+y
 vmap <Leader>p  "+p
 nmap <Leader>x  "+d
 
+"shortcuts navegation
+--------------------
+nmap <Leader>gt :bnext<CR>
+nmap <Leader>gT :bprevious<CR>
+nmap gt :bnext<CR>
+nmap gT :bprevious<CR>
+nmap <Leader>gy :wincmd w<CR>
+nmap <Leader>gY :wincmd W<CR>
+nmap gy :wincmd w<CR>
+nmap gY :wincmd W<CR>
+nmap <Leader>gZ :bprevious<CR>
+nmap <Leader>gz :bnext<CR>
+nmap gZ :bprevious<CR>
+nmap gz :bnext<CR>
+
 "cursor on windows switch between windows
 "-------------------
-nmap <Leader>sjw <C-w>j
-nmap <Leader>slw <C-w>l
-nmap <Leader>shw <C-w>h
-nmap <Leader>skw <C-w>k
+nmap <Leader>sjw :wincmd j<CR>
+nmap <Leader>slw :wincmd l<CR>
+nmap <Leader>shw :wincmd h<CR>
+nmap <Leader>skw :wincmd k<CR>
+nmap <Leader>sHw :wincmd h<CR>
+nmap <Leader>sLw :wincmd b<CR>
+nmap <Leader>sKw :wincmd p<CR>
+nmap <Leader>sJw :wincmd p<CR>
 
 
+
+"repeat last command
+"---------------------
+:nmap <Leader><Tab> @:<CR>
 
 
 
