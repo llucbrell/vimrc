@@ -426,6 +426,8 @@ nmap <Leader>kKw :$q!<CR>
 nmap <Leader>kHw :wincmd t |q! | wincmd p<CR>
 nmap <Leader>kLw :wincmd b |q! | wincmd p<CR>
 nmap <Leader>hw :hide<CR>
+nmap <Leader>haw :wincmd o<CR>
+nmap <Leader>hAw :wincmd o | hide<CR>
 nmap <Leader>hfw :1hide<CR>
 nmap <Leader>hlw :$hide<CR>
 nmap <Leader>hJw :1hide<CR>
@@ -461,7 +463,7 @@ nmap <Leader>gt :tab split<CR>
 nmap <Leader>nrw :split<CR>
 nmap <Leader>nrvw :vsplit<CR>
 "kill all windows
-nmap <Leader>kAw :wincmd o | q!<CR>
+nmap <Leader>kAw :wincmd o | q! | new<CR>
 
 
 "buffers
