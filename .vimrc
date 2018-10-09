@@ -390,8 +390,8 @@ nmap <Leader>kAt :tabnew | tabonly<CR>
 nmap <Leader>nw :new <CR>
 nmap <Leader>nkw :new<CR>
 nmap <Leader>nlw :vnew<CR>
-nmap <Leader>nrw :vnew | wincmd R<CR>
-nmap <Leader>njw :new | wincmd J<CR>
+"nmap <Leader>nrw :vnew | wincmd R<CR>
+"nmap <Leader>njw :new | wincmd J<CR>
 nmap <Leader>nvw :vnew<CR>
 nmap <Leader>ew :e
 nmap <Leader>ehw :wincmd h<CR>
@@ -408,12 +408,12 @@ nmap <Leader>dlw :vsplit<CR>
 nmap <Leader>dlw :vsplit<CR>
 nmap <Leader>djw :split<CR>
 nmap <Leader>dkw :split<CR>
-nmap <Leader>dfw :split | wincmd H<CR>
-nmap <Leader>dlw :split | wincmd L<CR> 
-nmap <Leader>dvfw :vsplit | wincmd t<CR>
-nmap <Leader>dvlw :vsplit | wincmd b<CR> 
-nmap <Leader>dfvw :vsplit | wincmd t<CR>
-nmap <Leader>dlvw :vsplit | wincmd b<CR> 
+"nmap <Leader>dfw :split | wincmd H<CR>
+"nmap <Leader>dlw :split | wincmd L<CR> 
+"nmap <Leader>dvfw :vsplit | wincmd t<CR>
+"nmap <Leader>dvlw :vsplit | wincmd b<CR> 
+"nmap <Leader>dfvw :vsplit | wincmd t<CR>
+"nmap <Leader>dlvw :vsplit | wincmd b<CR> 
 nmap <Leader>kw :q!<CR>
 nmap <Leader>khw :wincmd h| q! | wincmd p<CR>
 nmap <Leader>kjw :wincmd j| q! | wincmd p<CR>
