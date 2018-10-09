@@ -205,7 +205,7 @@ nmap ś "
 nmap á !
 nmap ź \|
 nmap ´z \|
-nmap x @
+nmap ´x @
 nmap ´b \
 nmap ń {
 nmap ḿ }
@@ -236,7 +236,7 @@ omap ś "
 omap á !
 omap ź \|
 omap ´z \|
-omap x @
+omap ´x @
 omap ´b \
 omap ń {
 omap ḿ }
@@ -267,7 +267,7 @@ vmap ś "
 vmap á !
 vmap ź \|
 vmap ´z \|
-vmap x @
+vmap ´x @
 vmap ´b \
 vmap ń {
 vmap ḿ }
@@ -298,7 +298,7 @@ map! ś "
 map! á !
 map! ź \|
 map! ´z \|
-map! x @
+map! ´x @
 map! ´b \
 map! ń {
 map! ḿ }
