@@ -120,8 +120,8 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 " keymapping for control charcters
-map ´ñ <C-V>241
-map ñ <Esc>
+map! ´ñ <C-V>241
+map! ñ <Esc>
 map ´´ ´
 map `` `
 
