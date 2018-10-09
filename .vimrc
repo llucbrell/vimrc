@@ -378,7 +378,7 @@ nmap <Leader>mHt :tabfirst <CR>
 nmap <Leader>mLt :tablast <CR>
 "nmap ṔTW -- need command to from tab to window --may be it's not possible
 " only read tab
-nmap <Leader>nrt :tabv 
+nmap <Leader>nrt :tabv<CR> 
 " only one tab
 nmap <Leader>kat :tabonly<CR>
 " kill all tabs
@@ -390,8 +390,8 @@ nmap <Leader>kAt :tabnew | tabonly<CR>
 nmap <Leader>nw :new <CR>
 nmap <Leader>nkw :new<CR>
 nmap <Leader>nlw :vnew<CR>
-"nmap <Leader>nrw :vnew | wincmd R<CR>
-"nmap <Leader>njw :new | wincmd J<CR>
+nmap <Leader>nhw :vnew | wincmd H<CR>
+nmap <Leader>njw :new | wincmd J<CR>
 nmap <Leader>nvw :vnew<CR>
 nmap <Leader>ew :e
 nmap <Leader>ehw :wincmd h<CR>
@@ -500,7 +500,7 @@ vmap <Leader>p  "+p
 nmap <Leader>x  "+d
 
 "shortcuts navegation
---------------------
+"--------------------
 nmap <Leader>gt :bnext<CR>
 nmap <Leader>gT :bprevious<CR>
 nmap gt :bnext<CR>
@@ -600,7 +600,7 @@ Plug 'honza/vim-snippets'
 call plug#end()
 
 " PLUGIN CONFIGURATION SETUP
-------------------------------
+"------------------------------
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
