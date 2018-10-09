@@ -122,6 +122,8 @@ map <right> <nop>
 " keymapping for control charcters
 map! ´ñ <C-V>241
 map! ñ <Esc>
+vmap! ñ <Esc>
+omap! ñ <Esc>
 map ´´ ´
 map `` `
 
