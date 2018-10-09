@@ -382,7 +382,7 @@ nmap <Leader>nrt :tabv<CR>
 " only one tab
 nmap <Leader>kat :tabonly<CR>
 " kill all tabs
-nmap <Leader>kAt :tabnew | tabonly<CR>
+nmap <Leader>kAt :tabnew tabonly<CR>
 
 "windows
 "----------
@@ -390,8 +390,8 @@ nmap <Leader>kAt :tabnew | tabonly<CR>
 nmap <Leader>nw :new <CR>
 nmap <Leader>nkw :new<CR>
 nmap <Leader>nlw :vnew<CR>
-nmap <Leader>nhw :vnew | wincmd H<CR>
-nmap <Leader>njw :new | wincmd J<CR>
+nmap <Leader>nhw :vnew wincmd H<CR>
+nmap <Leader>njw :new wincmd J<CR>
 nmap <Leader>nvw :vnew<CR>
 nmap <Leader>ew :e
 nmap <Leader>ehw :wincmd h<CR>
@@ -408,36 +408,36 @@ nmap <Leader>dlw :vsplit<CR>
 nmap <Leader>dlw :vsplit<CR>
 nmap <Leader>djw :split<CR>
 nmap <Leader>dkw :split<CR>
-"nmap <Leader>dfw :split | wincmd H<CR>
-"nmap <Leader>dlw :split | wincmd L<CR> 
-"nmap <Leader>dvfw :vsplit | wincmd t<CR>
-"nmap <Leader>dvlw :vsplit | wincmd b<CR> 
-"nmap <Leader>dfvw :vsplit | wincmd t<CR>
-"nmap <Leader>dlvw :vsplit | wincmd b<CR> 
+nmap <Leader>dfw :spliwincmd H<CR>
+nmap <Leader>dlw :split wincmd L<CR> 
+nmap <Leader>dvfw :vsplit wincmd t<CR>
+nmap <Leader>dvlw :vsplit wincmd b<CR> 
+nmap <Leader>dfvw :vsplit wincmd t<CR>
+nmap <Leader>dlvw :vsplit wincmd b<CR> 
 nmap <Leader>kw :q!<CR>
-nmap <Leader>khw :wincmd h| q! | wincmd p<CR>
-nmap <Leader>kjw :wincmd j| q! | wincmd p<CR>
-nmap <Leader>kkw :wincmd k| q! | wincmd p<CR>
-nmap <Leader>klw :wincmd l| q! | wincmd p<CR>
+nmap <Leader>khw :wincmd h q! wincmd p<CR>
+nmap <Leader>kjw :wincmd j q! wincmd p<CR>
+nmap <Leader>kkw :wincmd k q! wincmd p<CR>
+nmap <Leader>klw :wincmd l q! wincmd p<CR>
 nmap <Leader>kfw :1q!<CR>
 nmap <Leader>klw :$q!<CR>
 nmap <Leader>kJw :1q!<CR>
 nmap <Leader>kKw :$q!<CR>
-nmap <Leader>kHw :wincmd t |q! | wincmd p<CR>
-nmap <Leader>kLw :wincmd b |q! | wincmd p<CR>
+nmap <Leader>kHw :wincmd t q! wincmd p<CR>
+nmap <Leader>kLw :wincmd b q! wincmd p<CR>
 nmap <Leader>hw :hide<CR>
 nmap <Leader>haw :wincmd o<CR>
-nmap <Leader>hAw :wincmd o | hide<CR>
+nmap <Leader>hAw :wincmd o  hide<CR>
 nmap <Leader>hfw :1hide<CR>
 nmap <Leader>hlw :$hide<CR>
 nmap <Leader>hJw :1hide<CR>
 nmap <Leader>hKw :$hide<CR>
-nmap <Leader>hHw :wincmd t | hide | wincmd p<CR>
-nmap <Leader>hLw :wincmd b | hide | wincmd p<CR>
-nmap <Leader>khw :wincmd h| hide | wincmd p<CR>
-nmap <Leader>kjw :wincmd j| hide | wincmd p<CR>
-nmap <Leader>kkw :wincmd k| hide | wincmd p<CR>
-nmap <Leader>klw :wincmd l| hide | wincmd p<CR>
+nmap <Leader>hHw :wincmd t hide  wincmd p<CR>
+nmap <Leader>hLw :wincmd b hide  wincmd p<CR>
+nmap <Leader>khw :wincmd h hide  wincmd p<CR>
+nmap <Leader>kjw :wincmd j hide  wincmd p<CR>
+nmap <Leader>kkw :wincmd k hide  wincmd p<CR>
+nmap <Leader>klw :wincmd l hide  wincmd p<CR>
 "leaves only the current window
 nmap <Leader>haw :wincmd o<CR>
 "TODO must change kill all windows to throw away changes
@@ -463,7 +463,7 @@ nmap <Leader>gt :tab split<CR>
 nmap <Leader>nrw :split<CR>
 nmap <Leader>nrvw :vsplit<CR>
 "kill all windows
-nmap <Leader>kAw :wincmd o | q! | new<CR>
+nmap <Leader>kAw :wincmd o q! new<CR>
 
 
 "buffers
@@ -491,7 +491,7 @@ nmap <Leader>mfb :bfirst <CR>
 nmap <Leader>mRb :blast <CR>
 nmap <Leader>mLb :bfirst <CR>
 nmap <Leader>kAw :bufdo bdelete!<CR>
-nmap <Leader>kaw :%bd|e#<CR>
+nmap <Leader>kaw :%bd e#<CR>
 
 "copy to cipboard
 "-----------------
