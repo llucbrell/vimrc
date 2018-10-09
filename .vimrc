@@ -101,8 +101,8 @@ set showcmd
 
 " turn on the spellchecker for spanish and english
 " also allways to show only 5 suggestions
-"set spelllang=en,es
-"set spell
+set spelllang=en,es
+set spell
 
 " put a new line character at specified position in all lines
 " also called wrapmargin at 20 characters
