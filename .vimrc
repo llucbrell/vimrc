@@ -571,7 +571,7 @@ nmap ´P :Prettier<CR>
 "--------------------------------------------------------------------------- 
 "                          PLUGIN LOAD for NEOVIM
 "---------------------------------------------------------------------------
-
+if has('nvim')
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 call plug#begin('/root/.local/share/nvim/plugged')
@@ -692,4 +692,11 @@ let g:airline_symbols_ascii = 1
 let g:airline#extensions#branch#enabled = 1
 " to change text when it's no branch uncomment next
 "let g:airline#extensions#branch#empty_message = ''  
+
+endif
+
+
+ if !has('nvim')
+        " whatever plugins or configuration only for vim
+    endif
 
