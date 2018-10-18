@@ -85,19 +85,25 @@ set norelativenumber
 
 " set visual line on the cursor
 set cursorline 
-hi CursorLine guibg=lightgray ctermbg=black ctermfg=red
+"hi CursorLine guibg=lightgray ctermbg=black ctermfg=red
+hi CursorLine guibg=lightgray ctermbg=black 
 
 "Change Color when entering Insert Mode
-autocmd InsertEnter * highlight  CursorLine ctermbg=lightgray ctermfg=red
+"autocmd InsertEnter * highlight  CursorLine ctermbg=lightgray ctermfg=red
+" with this change we can see color schemes while we type
+autocmd InsertEnter * highlight  CursorLine ctermbg=lightgray
 
 " Revert Color to default when leaving Insert Mode
-autocmd InsertLeave * highlight  CursorLine ctermbg=black ctermfg=red
+"autocmd InsertLeave * highlight  CursorLine ctermbg=black ctermfg=red
+" with this change we can see color schemes while we type
+autocmd InsertLeave * highlight  CursorLine guifg=black ctermbg=black
 
 " show commands while typing in normal mode
 set showcmd
 
 " set the color scheme
 "colorscheme default
+colorscheme desert
 
 " turn on the spellchecker for spanish and english
 " also allways to show only 5 suggestions
@@ -108,7 +114,9 @@ set spell
 " also called wrapmargin at 20 characters
 " set wrapmargin=20 
 
-
+" adjust colors to have better contrast
+"set background=dark
+"set t_Co=256
 
 "-------------------------------------------------------------------------------------
 "                 KEY MAPPING
