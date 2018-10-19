@@ -108,7 +108,12 @@ colorscheme desert
 " turn on the spellchecker for spanish and english
 " also allways to show only 5 suggestions
 set spelllang=en,es
-set spell
+
+" set the completition configuration
+" to look at the current buffer, the windows, the unloaded buffers
+" the tabs, the included files, and the spellchecker only when
+" its turn on
+set complete=.,w,b,u,t,i,kspell
 
 " put a new line character at specified position in all lines
 " also called wrapmargin at 20 characters
@@ -558,6 +563,15 @@ function! NumberToggle()
     endif
 endfunction
 
+function! SpellToggle()
+    if(&spell == 1)
+        set nospell
+    else
+        set spell
+    endif
+endfunction
+
+
 "nnoremap <C-r> :call NumberToggle()<CR>
 nmap ´R :call NumberToggle()<CR>
 "complete with dictionary
@@ -565,8 +579,8 @@ imap ´D <C-x><C-k>
 "run prettier
 nmap ´P :Prettier<CR>
 
-
-
+"turn on the spellchecker
+nmap ´S :call SpellToggle()<CR>
 
 
 
